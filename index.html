@@ -1,28 +1,249 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Singh - Resume</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: lightblue;
-            padding: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e9edf2;
+            color: #263238;
+            line-height: 1.5;
+            padding: 25px;
+        }
+
+        .resume {
+            max-width: 850px;
+            margin: auto;
+            background: #ffffff;
+            padding: 40px 45px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            border-bottom: 3px solid #176b87;
+            padding-bottom: 18px;
+            margin-bottom: 22px;
         }
 
         h1 {
-            color: darkblue;
+            font-size: 32px;
+            color: #123047;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
         }
 
-        p {
-            font-size: 18px;
+        .role {
+            font-size: 17px;
+            color: #176b87;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .contact {
+            font-size: 12px;
+            color: #52616b;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 15px;
+            color: #176b87;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #d5dfe5;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        p, li {
+            font-size: 12.5px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .job {
+            margin-bottom: 12px;
+        }
+
+        .job-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #123047;
+        }
+
+        .company {
+            font-size: 12px;
+            color: #52616b;
+            margin-bottom: 5px;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 7px 20px;
+        }
+
+        .skill {
+            font-size: 12px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #123047;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume {
+                max-width: none;
+                padding: 25px 35px;
+                box-shadow: none;
+            }
+
+            @page {
+                size: A4;
+                margin: 10mm;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 0;
+            }
+
+            .resume {
+                padding: 25px 20px;
+            }
+
+            .skills {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is my first single-page website.</p>
+    <main class="resume">
+
+        <header>
+            <h1>Amit Singh</h1>
+            <div class="role">IT Support | Cloud & DevOps Enthusiast</div>
+            <div class="contact">
+                Pune, Maharashtra, India |
+                +91-XXXXXXXXXX |
+                amit.email@example.com
+                <br>
+                LinkedIn: linkedin.com/in/your-profile |
+                GitHub: github.com/your-username
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p>
+                IT professional with experience in technical support,
+                incident resolution, and enterprise application support.
+                Experienced in troubleshooting issues and supporting
+                business-critical systems. Currently developing practical
+                skills in Linux, networking, AWS, Docker, Jenkins, and
+                DevOps automation, with an interest in cloud infrastructure
+                and software engineering.
+            </p>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+
+            <div class="job">
+                <div class="job-title">IT Consultant</div>
+                <div class="company">Tata Consultancy Services (TCS) | [Employment Dates]</div>
+                <ul>
+                    <li>Provided technical and application support for enterprise systems.</li>
+                    <li>Investigated incidents, troubleshot issues, and resolved support tickets.</li>
+                    <li>Worked with Progress 4GL and QAD application environments supporting Lear Manufacturing.</li>
+                    <li>Supported EMEA operations and coordinated issue resolution to maintain service continuity.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <div class="skill"><span class="label">Operating Systems:</span> Linux, Debian, Windows</div>
+                <div class="skill"><span class="label">Cloud:</span> AWS EC2, S3, IAM</div>
+                <div class="skill"><span class="label">DevOps:</span> Git, GitHub, Docker, Jenkins</div>
+                <div class="skill"><span class="label">Networking:</span> TCP/IP, DNS, DHCP, NAT, VLANs</div>
+                <div class="skill"><span class="label">Scripting:</span> Bash, Python</div>
+                <div class="skill"><span class="label">Web:</span> HTML, CSS, JavaScript (learning)</div>
+                <div class="skill"><span class="label">Tools:</span> Packet Tracer, VirtualBox, SSH</div>
+                <div class="skill"><span class="label">Application Support:</span> QAD, Progress 4GL</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+
+            <div class="job">
+                <div class="job-title">Static Website Hosting on AWS S3</div>
+                <ul>
+                    <li>Hosted a static website using Amazon S3 and configured bucket access permissions.</li>
+                    <li>Explored IAM policies, bucket policies, and static website hosting settings.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Docker & Jenkins Practice Environment</div>
+                <ul>
+                    <li>Practiced containerizing web content using Docker and Apache HTTP Server.</li>
+                    <li>Configured Linux-based environments and explored SSH access and Jenkins setup.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="job">
+                <div class="job-title">PGCP – IT Infrastructure, Systems & Security (ITISS)</div>
+                <div class="company">IACSD, Akurdi, Pune | 2026 – Present</div>
+            </div>
+            <div class="job">
+                <div class="job-title">[Bachelor's Degree / Qualification]</div>
+                <div class="company">[College / University] | [Graduation Year]</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Additional Information</h2>
+            <p>
+                <span class="label">Career Interests:</span>
+                Cloud Engineering, DevOps, Site Reliability Engineering,
+                and Software Development.
+            </p>
+        </section>
+
+    </main>
 </body>
 </html>
-
